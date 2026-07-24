@@ -16,18 +16,16 @@ data/
 
 字段说明见 [docs/schema.md](docs/schema.md)。
 
-## 当前内容
+## 数据
 
-- `data/DEMO.SZ/`：合成样例（非真实行情），用于说明目录格式
+目前有的数据 沪深2017-至今 level2 十档数据。
 
-把本地数据放进 `data/` 后提交即可，例如：
+由于存储原因，免费共享最近2个月数据，需要更多数据 ¥500打包所有数据，请联系作者邮箱：lukalaoban@gmail.com
 
-```bash
-cp -R ~/Documents/stockdata/300476.SZ data/
-git add data/300476.SZ
-git commit -m "Add 300476.SZ Level-2 history"
-git push
-```
+| 日期 | 链接 |
+|------|------|
+| 202605-202606 | 夸克网盘：https://pan.quark.cn/s/8bae13aef6a9?pwd=Gxcc
+提取码：Gxcc |
 
 ## 体积提醒
 
