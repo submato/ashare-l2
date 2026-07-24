@@ -1,33 +1,15 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-dist/
-build/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Env / secrets
-.env
-.env.*
-!.env.example
-
-# IDE
+.DS_Store
 .idea/
 .vscode/
 *.swp
-.DS_Store
 
-# Local market data (never commit raw L2 dumps)
-data/
-*.parquet
-*.feather
-*.h5
-*.hdf5
+# local tooling
+.venv/
+__pycache__/
+*.py[cod]
 
-# Keep only tiny demo samples under samples/
-!samples/
-!samples/**/*.csv
+# optional: ignore huge archives if you keep them locally only
+*.zip
+*.7z
+*.tar
+*.tar.gz
