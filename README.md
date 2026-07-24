@@ -24,8 +24,7 @@ data/
 
 | 日期 | 链接 |
 |------|------|
-| 202605-202606 | 夸克网盘：https://pan.example.test/s/redacted?pwd=Gxcc
-提取码：Gxcc |
+| 202605-202606 | 夸克网盘：https://pan.example.test/s/redacted?pwd=Gxcc；提取码：Gxcc |
 
 ## 体积提醒
 
