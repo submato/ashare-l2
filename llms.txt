@@ -1,0 +1,43 @@
+# ashare-l2
+
+> China A-share Level-2 market-data index and schema reference for 10-level order books, order-by-order events and tick-by-tick trades.
+
+## Primary Documentation
+
+- [Repository Overview](https://github.com/submato/ashare-l2): Bilingual overview, current public download links, quick start, use cases, limitations and FAQ.
+- [CSV Schema Reference](https://github.com/submato/ashare-l2/blob/main/docs/schema.md): Field order and parsing notes for quote snapshots, orders and trades.
+- [Dataset Data Card](https://github.com/submato/ashare-l2/blob/main/docs/data-card.md): Provenance, intended uses, quality checks, known limitations and licensing boundaries.
+- [Citation Metadata](https://github.com/submato/ashare-l2/blob/main/CITATION.cff): Machine-readable citation information for research and public projects.
+- [Repository License](https://github.com/submato/ashare-l2/blob/main/LICENSE): MIT terms for repository code and documentation; market data may have separate rights.
+
+## Sample Data
+
+- [10-Level Quote Snapshot Sample](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E8%A1%8C%E6%83%85.csv): UTF-8 synthetic CSV with 61 quote, depth and daily-statistics fields.
+- [Order-by-Order Sample](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E9%80%90%E7%AC%94%E5%A7%94%E6%89%98.csv): UTF-8 synthetic CSV with 10 order-event fields.
+- [Tick-by-Tick Trade Sample](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E9%80%90%E7%AC%94%E6%88%90%E4%BA%A4.csv): UTF-8 synthetic CSV with 12 trade and cancellation-event fields.
+
+## Key Facts
+
+- Subject: China A-share Level-2 historical market data.
+- Markets: Shanghai Stock Exchange and Shenzhen Stock Exchange, subject to archive availability.
+- Channels: 10-level order book snapshots, order-by-order records and tick-by-tick trades.
+- Partitioning: `data/{SYMBOL}/l2/{YYYYMMDD}/`.
+- Maintainer-stated historical inventory: 2017 to present; exact symbols and dates require confirmation.
+- Public download listed in the README: May 2026 through June 2026.
+- GitHub sample: synthetic `DEMO.SZ` data dated January 2, 2025.
+- Common format: Wind-style CSV; historical files are commonly GBK encoded and the demo is UTF-8.
+- Repository scope: documentation, index and small samples; the complete archive is not stored in GitHub.
+
+## Usage and Licensing
+
+- Suitable for quantitative-finance research, limit-order-book analysis, market microstructure, order-flow studies, data engineering and event-driven backtesting.
+- Users must validate completeness, timestamps, price scaling, event codes, corporate actions and source-specific units.
+- The MIT License covers repository code and documentation only.
+- Exchange or vendor terms may separately restrict downloading, redistribution, commercial use or public display of market data.
+- The repository does not provide investment advice or guarantee fitness for live trading.
+
+## Contact
+
+- Repository: https://github.com/submato/ashare-l2
+- Issues: https://github.com/submato/ashare-l2/issues
+- Data availability: lukalaoban@gmail.com
