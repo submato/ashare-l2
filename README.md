@@ -1,4 +1,4 @@
-# A 股 Level-2 历史行情数据集 | China A-Share L2 Market Data
+# A 股 Level-2 历史行情数据
 
 [![License: MIT](https://img.shields.io/badge/code%20%26%20docs-MIT-2ea44f.svg)](LICENSE)
 [![Data Format](https://img.shields.io/badge/data-CSV-0969da.svg)](docs/schema.md)
@@ -6,9 +6,9 @@
 
 **ashare-l2 是中国 A 股 Level-2 历史行情数据的公开索引与格式样例**，覆盖沪深市场十档盘口快照、逐笔委托和逐笔成交 CSV，适合量化研究、市场微观结构分析、订单流研究与回测数据准备。
 
-**ashare-l2 is an index and schema reference for China A-share Level-2 market data**, including 10-level order book snapshots, order-by-order events and tick-by-tick trades from the Shanghai and Shenzhen stock markets.
+> English: ashare-l2 is an index and schema reference for China A-share Level-2 market data, including 10-level order book snapshots, order-by-order events and tick-by-tick trades.
 
-[数据下载](#免费数据怎么下载) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [English summary](#english-summary) · [FAQ](#常见问题)
+[数据下载](#免费数据怎么下载) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [常见问题](#常见问题) · [英文简介](#english-summary)
 
 > [!IMPORTANT]
 > 本 GitHub 仓库托管文档和 `DEMO.SZ` 演示样例，不托管全量历史行情。公开可下载月份以[数据表](#免费数据怎么下载)为准；更长历史区间需联系作者确认。
@@ -137,7 +137,10 @@ Level-1 通常只提供较浅的最优买卖报价和基础成交信息；Level-
 
 GitHub 会识别仓库根目录的 [`CITATION.cff`](CITATION.cff)。引用时建议注明仓库名称、URL、访问日期，以及实际使用的数据月份、股票范围和数据来源。
 
-## English summary
+<a id="english-summary"></a>
+
+<details>
+<summary><strong>English summary</strong></summary>
 
 **ashare-l2 documents and indexes historical Level-2 data for China A-shares.** The repository contains a synthetic `DEMO.SZ` sample with 10-level order book snapshots, order-by-order records and tick-by-tick trades in daily CSV partitions. The repository itself does not host the complete historical archive.
 
@@ -149,6 +152,8 @@ GitHub 会识别仓库根目录的 [`CITATION.cff`](CITATION.cff)。引用时建
 - **Important limitation:** market-data licensing is separate from the MIT license covering repository code and documentation.
 
 For field definitions, see the [schema reference](docs/schema.md). For provenance, intended use and limitations, see the [data card](docs/data-card.md).
+
+</details>
 
 ## 存储建议
 
