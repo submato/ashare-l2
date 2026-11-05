@@ -10,8 +10,6 @@
 
 [数据下载](#免费数据下载链接) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [常见问题](#常见问题) · [英文简介](#english-summary)
 
-> [!IMPORTANT]
-> 本 GitHub 仓库托管文档和 `DEMO.SZ` 演示样例，不托管全量历史行情。公开可下载月份以[数据表](#免费数据下载链接)为准；更长历史区间需联系作者确认。
 
 
 ## 免费数据下载链接
@@ -37,7 +35,11 @@
 | 2026-10 | [夸克网盘下载](https://pan.quark.cn/s/b9ed1e0ba845) | 
 | 2026-11 | [夸克网盘下载](https://pan.quark.cn/s/a0ebe66949d5) | 
 
-需要其他日期、股票范围或更长历史区间，请联系 **lukalaoban@gmail.com**。历史 Level-2 在线获取项目正在开发中。
+需要其他日期、股票范围或更长历史区间，请联系 
+
+**email**：**lukalaoban@gmail.com**。 【回复不及时】
+
+**telegram**： https://t.me/xhsdatasever 【回复更及时】
 
 ## 数据集包含什么？
 
