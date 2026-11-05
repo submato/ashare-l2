@@ -1,43 +1,47 @@
 # ashare-l2
 
-> China A-share Level-2 market-data index and schema reference for 10-level order books, order-by-order events and tick-by-tick trades.
+> 中国 A 股 Level-2 历史行情数据索引与格式文档，包含十档盘口快照、逐笔委托和逐笔成交。
 
-## Primary Documentation
+## 核心文档
 
-- [Repository Overview](https://github.com/submato/ashare-l2): Bilingual overview, current public download links, quick start, use cases, limitations and FAQ.
-- [CSV Schema Reference](https://github.com/submato/ashare-l2/blob/main/docs/schema.md): Field order and parsing notes for quote snapshots, orders and trades.
-- [Dataset Data Card](https://github.com/submato/ashare-l2/blob/main/docs/data-card.md): Provenance, intended uses, quality checks, known limitations and licensing boundaries.
-- [Citation Metadata](https://github.com/submato/ashare-l2/blob/main/CITATION.cff): Machine-readable citation information for research and public projects.
-- [Repository License](https://github.com/submato/ashare-l2/blob/main/LICENSE): MIT terms for repository code and documentation; market data may have separate rights.
+- [仓库首页](https://github.com/submato/ashare-l2)：项目概述、当前公开下载链接、快速开始、适用场景、限制和常见问题。
+- [CSV 字段说明](https://github.com/submato/ashare-l2/blob/main/docs/schema.md)：十档行情、逐笔委托和逐笔成交的字段顺序与解析注意事项。
+- [数据卡](https://github.com/submato/ashare-l2/blob/main/docs/data-card.md)：数据来源、推荐用途、质量检查、已知限制和许可边界。
+- [引用元数据](https://github.com/submato/ashare-l2/blob/main/CITATION.cff)：供研究论文和公开项目使用的机器可读引用信息。
+- [仓库许可证](https://github.com/submato/ashare-l2/blob/main/LICENSE)：代码与文档采用 MIT License；行情数据可能有独立授权要求。
 
-## Sample Data
+## 演示数据
 
-- [10-Level Quote Snapshot Sample](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E8%A1%8C%E6%83%85.csv): UTF-8 synthetic CSV with 61 quote, depth and daily-statistics fields.
-- [Order-by-Order Sample](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E9%80%90%E7%AC%94%E5%A7%94%E6%89%98.csv): UTF-8 synthetic CSV with 10 order-event fields.
-- [Tick-by-Tick Trade Sample](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E9%80%90%E7%AC%94%E6%88%90%E4%BA%A4.csv): UTF-8 synthetic CSV with 12 trade and cancellation-event fields.
+- [十档行情快照样例](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E8%A1%8C%E6%83%85.csv)：UTF-8 合成 CSV，包含 61 个行情、盘口和日内统计字段。
+- [逐笔委托样例](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E9%80%90%E7%AC%94%E5%A7%94%E6%89%98.csv)：UTF-8 合成 CSV，包含 10 个委托事件字段。
+- [逐笔成交样例](https://github.com/submato/ashare-l2/blob/main/data/DEMO.SZ/l2/20250102/%E9%80%90%E7%AC%94%E6%88%90%E4%BA%A4.csv)：UTF-8 合成 CSV，包含 12 个成交和撤单事件字段。
 
-## Key Facts
+## 关键事实
 
-- Subject: China A-share Level-2 historical market data.
-- Markets: Shanghai Stock Exchange and Shenzhen Stock Exchange, subject to archive availability.
-- Channels: 10-level order book snapshots, order-by-order records and tick-by-tick trades.
-- Partitioning: `data/{SYMBOL}/l2/{YYYYMMDD}/`.
-- Maintainer-stated historical inventory: 2017 to present; exact symbols and dates require confirmation.
-- Public download listed in the README: May 2026 through June 2026.
-- GitHub sample: synthetic `DEMO.SZ` data dated January 2, 2025.
-- Common format: Wind-style CSV; historical files are commonly GBK encoded and the demo is UTF-8.
-- Repository scope: documentation, index and small samples; the complete archive is not stored in GitHub.
+- 主题：中国 A 股 Level-2 历史行情数据。
+- 市场：上海证券交易所和深圳证券交易所，实际范围以数据库存为准。
+- 通道：十档盘口快照、逐笔委托和逐笔成交。
+- 分区结构：`data/{SYMBOL}/l2/{YYYYMMDD}/`。
+- 作者说明的历史库存：2017 年至今；具体证券和交易日需联系确认。
+- README 当前公开下载范围：2026 年 5 月至 6 月。
+- GitHub 演示样例：日期为 2025 年 1 月 2 日的合成 `DEMO.SZ` 数据。
+- 常见格式：Wind 风格 CSV；历史文件通常为 GBK 编码，演示文件为 UTF-8。
+- 仓库范围：文档、数据索引和小型样例；GitHub 不托管完整历史数据。
 
-## Usage and Licensing
+## 使用与许可
 
-- Suitable for quantitative-finance research, limit-order-book analysis, market microstructure, order-flow studies, data engineering and event-driven backtesting.
-- Users must validate completeness, timestamps, price scaling, event codes, corporate actions and source-specific units.
-- The MIT License covers repository code and documentation only.
-- Exchange or vendor terms may separately restrict downloading, redistribution, commercial use or public display of market data.
-- The repository does not provide investment advice or guarantee fitness for live trading.
+- 适用于量化金融、订单簿、市场微观结构、订单流、数据工程和事件驱动回测研究。
+- 使用者必须验证完整性、时间戳、价格缩放、事件代码、公司行动和来源特有单位。
+- MIT License 仅覆盖仓库中的代码与文档。
+- 交易所或供应商条款可能单独限制行情数据的下载、再分发、商用或公开展示。
+- 本仓库不提供投资建议，也不保证数据适合实盘交易。
 
-## Contact
+## 联系方式
 
-- Repository: https://github.com/submato/ashare-l2
-- Issues: https://github.com/submato/ashare-l2/issues
-- Data availability: lukalaoban@gmail.com
+- 仓库：https://github.com/submato/ashare-l2
+- 问题反馈：https://github.com/submato/ashare-l2/issues
+- 数据可用性：lukalaoban@gmail.com
+
+## English Keywords
+
+China A-share Level-2 market data; 10-level order book; order-by-order data; tick-by-tick trades; quantitative finance; market microstructure.
