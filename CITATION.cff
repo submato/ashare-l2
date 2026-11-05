@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this repository, cite it and record the exact data dates, symbols, source, and access date."
+title: "ashare-l2: China A-Share Level-2 Market Data"
+type: dataset
+authors:
+  - name: "submato"
+    email: "lukalaoban@gmail.com"
+repository-code: "https://github.com/submato/ashare-l2"
+url: "https://github.com/submato/ashare-l2"
+abstract: >-
+  An index, schema reference, and synthetic sample for historical China
+  A-share Level-2 market data, including 10-level order book snapshots,
+  order-by-order records, and tick-by-tick trades from the Shanghai and
+  Shenzhen stock markets.
+keywords:
+  - A-share
+  - China stock market
+  - Level-2 market data
+  - limit order book
+  - order-by-order data
+  - tick data
+  - quantitative finance
+  - market microstructure
+  - Shanghai Stock Exchange
+  - Shenzhen Stock Exchange
