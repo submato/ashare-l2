@@ -8,24 +8,34 @@
 
 > English: ashare-l2 is an index and schema reference for China A-share Level-2 market data, including 10-level order book snapshots, order-by-order events and tick-by-tick trades.
 
-[数据下载](#免费数据怎么下载) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [常见问题](#常见问题) · [英文简介](#english-summary)
+[数据下载](#免费数据下载链接) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [常见问题](#常见问题) · [英文简介](#english-summary)
 
 > [!IMPORTANT]
-> 本 GitHub 仓库托管文档和 `DEMO.SZ` 演示样例，不托管全量历史行情。公开可下载月份以[数据表](#免费数据怎么下载)为准；更长历史区间需联系作者确认。
+> 本 GitHub 仓库托管文档和 `DEMO.SZ` 演示样例，不托管全量历史行情。公开可下载月份以[数据表](#免费数据下载链接)为准；更长历史区间需联系作者确认。
 
 
 ## 免费数据下载链接
 
-因为存储成本，以及更新上传时间成本，作者提供两个版本数据，免费版本与付费版本 数据一模一样 区别在更新实效性
+由于数据存储和持续更新成本，作者提供免费版与付费版。两个版本的数据内容一致，主要区别是更新时效：
 
-免费版本：更新26年至今前一个月，（例 12月份会更新11月份数据）。数据持续更新，请star项目
+- **免费版**：公开 2026 年至上一个完整月份的数据，例如 12 月更新至 11 月。数据会持续更新，欢迎 Star 本项目。
+- **付费版**：提供 2017 年至今的历史数据和每日增量数据，每日 4–6 点更新当日数据。
 
-付费版本：提供2017年至今数据，增量数据，每日4-6点更新当日数据，
+下列月份均使用独立的永久分享链接，无需提取码。文件较大，建议下载后先校验目录、编码和字段，再批量导入数据库或回测系统。
 
-
-| 数据月份 | 下载地址 | 提取码 | 链接状态 |
+| 数据月份 | 独立下载地址 | 提取码 | 链接状态 |
 |---|---|---|---|
-| 2026年-1月 至今t-1月 | [夸克网盘下载](https://pan.quark.cn/s/8bae13aef6a9?pwd=Gxcc) | `Gxcc` | 2026-11-05 已验证 |
+| 2026-01 | [夸克网盘下载](https://pan.quark.cn/s/1439ecef08b6) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-02 | [夸克网盘下载](https://pan.quark.cn/s/116c0dfec6f8) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-03 | [夸克网盘下载](https://pan.quark.cn/s/2f8a73f7a32b) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-04 | [夸克网盘下载](https://pan.quark.cn/s/11c9d8e10984) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-05 | [夸克网盘下载](https://pan.quark.cn/s/f72f854d5285) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-06 | [夸克网盘下载](https://pan.quark.cn/s/0ca1466a2e09) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-07 | [夸克网盘下载](https://pan.quark.cn/s/4bb79887578d) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-08 | [夸克网盘下载](https://pan.quark.cn/s/3c0147a52fa6) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-09 | [夸克网盘下载](https://pan.quark.cn/s/26f2b82e0cec) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-10 | [夸克网盘下载](https://pan.quark.cn/s/b9ed1e0ba845) | 无 | 永久有效；2026-11-05 已验证 |
+| 2026-11 | [夸克网盘下载](https://pan.quark.cn/s/a0ebe66949d5) | 无 | 永久有效；2026-11-05 已验证 |
 
 需要其他日期、股票范围或更长历史区间，请联系 **lukalaoban@gmail.com**。历史 Level-2 在线获取项目正在开发中。
 
@@ -48,12 +58,10 @@ A 股 Level-2 数据比基础 Level-1 行情提供更深的盘口和更细的事
 | 范围 | 覆盖情况 | 获取方式 |
 |---|---|---|
 | GitHub 演示样例 | `DEMO.SZ`，日期 `2025-01-02` | 直接克隆本仓库 |
-| 当前公开下载 | `2026-05` 至 `2026-06` | 下方夸克网盘链接 |
+| 当前公开下载 | `2026-01` 至 `2026-11`，每月独立链接 | 下方夸克网盘链接 |
 | 作者维护的历史库存 | 沪深 A 股 `2017` 年至今；具体股票和交易日需确认 | 邮件联系作者 |
 
 公开数据计划按存储条件滚动更新，实际可用月份始终以本 README 的下载表为准。
-
-
 
 ## 快速开始
 
@@ -154,7 +162,7 @@ GitHub 会识别仓库根目录的 [`CITATION.cff`](CITATION.cff)。引用时建
 
 - **Markets:** Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE), subject to archive availability.
 - **Maintainer-stated coverage:** 2017 to present; confirm exact symbols and trading dates before purchase or research.
-- **Public download currently listed:** May-June 2026.
+- **Public download currently listed:** January-November 2026, with one permanent link per month.
 - **Formats:** Wind-style CSV; historical files are commonly GBK encoded, while the included demo is UTF-8.
 - **Use cases:** quantitative finance, limit order book research, market microstructure, order flow analysis, high-frequency data engineering and event-driven backtesting.
 - **Important limitation:** market-data licensing is separate from the MIT license covering repository code and documentation.
