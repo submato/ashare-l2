@@ -21,21 +21,10 @@
 
 下列月份均使用独立的永久分享链接，无需提取码。文件较大，建议下载后先校验目录、编码和字段，再批量导入数据库或回测系统。
 
-| 数据月份 | 独立下载地址 |
-|---|---|
-| 2026-01 | [夸克网盘下载](https://pan.example.test/s/redacted) |
-| 2026-02 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-03 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-04 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-05 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-06 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-07 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-08 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-09 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-10 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
-| 2026-11 | [夸克网盘下载](https://pan.example.test/s/redacted) | 
 
-需要其他日期、股票范围或更长历史区间，请联系 
+免费数据请访问： https://level2.dataflowserver.org/
+
+
 
 **email**：**lukalaoban@gmail.com**。 【回复不及时】
 
