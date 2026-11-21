@@ -4,25 +4,26 @@
 [![Data Format](https://img.shields.io/badge/data-CSV-0969da.svg)](docs/schema.md)
 [![Markets](https://img.shields.io/badge/markets-SSE%20%7C%20SZSE-d1242f.svg)](#数据集包含什么)
 
-**ashare-l2 是中国 A 股 Level-2 历史行情数据的公开索引与格式样例**，覆盖沪深市场十档盘口快照、逐笔委托和逐笔成交 CSV，适合量化研究、市场微观结构分析、订单流研究与回测数据准备。
+**ashare-l2 是中国 A 股 Level-2 历史行情数据的公开索引与格式样例。** Level2 就是这三份历史文件：十档行情快照、逐笔委托、逐笔成交。适合量化研究、市场微观结构分析、订单流研究与回测数据准备。
 
-> English: ashare-l2 is an index and schema reference for China A-share Level-2 market data, including 10-level order book snapshots, order-by-order events and tick-by-tick trades.
+> English: Level-2 here means three history files: 10-level order book snapshots, order-by-order events, and tick-by-tick trades.
 
-[数据下载](#免费数据下载链接) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [常见问题](#常见问题) · [英文简介](#english-summary)
-
-
-
-## 免费数据下载链接
-
-由于数据存储和持续更新成本，作者提供免费版与付费版。两个版本的数据内容一致，主要区别是更新时效：
-
-- **免费版**：公开 2026 年至上一个完整月份的数据，例如 12 月更新至 11 月。数据会持续更新，欢迎 Star 本项目。
-- **付费版**：提供 2017 年至今的历史数据和每日增量数据，每日 4–6 点更新当日数据。
-
-下列月份均使用独立的永久分享链接，无需提取码。文件较大，建议下载后先校验目录、编码和字段，再批量导入数据库或回测系统。
+[数据下载](#数据下载) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [常见问题](#常见问题) · [英文简介](#english-summary)
 
 
-免费数据请访问： https://level2.dataflowserver.org/
+
+## 数据下载
+
+Level2 不是另一套行情。每一份数据都包含下面三类 CSV，免费版和付费版的区别只在时间范围。下载和购买都在 <https://level2.dataflowserver.org/>。
+
+- **免费版**：只保留最近三个月。当前是 2026-09、2026-10、2026-11。注册并登录后下载，无需提取码。
+- **2026 全年**：¥299，包含更新至 2026 年 12 月 31 日。
+- **2024–2026 年**：¥499，包含更新至 2026 年 12 月 31 日。
+- **2022–2026 年**：¥699，包含更新至 2026 年 12 月 31 日。
+- **2017 年至今买断**：¥1999，一次买断。覆盖 2017 年至今，之后的每日更新不再另行收费。
+- **2027 年起的单月增量**：¥30/月，只购买所选月份，不自动续费。已购买 ¥1999 的账号包含后续更新，无需再按月付款。
+
+历史文件每日约 18:00 更新当日数据。文件较大，建议下载后先校验目录、编码和字段，再批量导入数据库或回测系统。
 
 
 
@@ -32,7 +33,7 @@
 
 ## 数据集包含什么？
 
-A 股 Level-2 数据比基础 Level-1 行情提供更深的盘口和更细的事件粒度。本项目采用按证券、日期分区的 CSV 结构，每个交易日包含以下三类数据：
+Level2 就是下面三类 CSV。本项目按证券、日期分区，每个交易日各有一份：
 
 | 数据通道 | 文件名 | 主要内容 | 典型用途 |
 |---|---|---|---|
@@ -44,15 +45,16 @@ A 股 Level-2 数据比基础 Level-1 行情提供更深的盘口和更细的事
 
 ## 数据覆盖范围
 
-这里需要区分三个范围，避免把演示文件误认为完整数据集：
+这里需要把演示样例和真实数据分开，避免把 `DEMO.SZ` 当成完整数据集：
 
 | 范围 | 覆盖情况 | 获取方式 |
 |---|---|---|
 | GitHub 演示样例 | `DEMO.SZ`，日期 `2025-01-02` | 直接克隆本仓库 |
-| 当前公开下载 | `2026-01` 至 `2026-11`，每月独立链接 | 下方夸克网盘链接 |
-| 作者维护的历史库存 | 沪深 A 股 `2017` 年至今；具体股票和交易日需确认 | 邮件联系作者 |
+| 免费下载 | 最近三个月，当前为 `2026-09` 至 `2026-11` | [官网](https://level2.dataflowserver.org/)注册登录 |
+| 付费历史 | 2026 年 ¥299；2024–2026 年 ¥499；2022–2026 年 ¥699；2017 年至今买断 ¥1999 | [官网](https://level2.dataflowserver.org/)购买 |
+| 2027 年起单月增量 | ¥30/月，手动购买；¥1999 买断已包含后续更新 | [官网](https://level2.dataflowserver.org/)购买 |
 
-公开数据计划按存储条件滚动更新，实际可用月份始终以本 README 的下载表为准。
+具体股票和交易日以下载包内的文件为准。GitHub 不托管完整历史文件。
 
 ## 快速开始
 
@@ -126,15 +128,15 @@ trades = read_l2_csv("data/DEMO.SZ/l2/20250102/逐笔成交.csv")
 
 ### 这个仓库提供免费的 A 股 Level-2 数据吗？
 
-是。仓库免费提供可直接克隆的演示样例，并在[下载表](#免费数据怎么下载)中列出当前公开共享的数据月份。GitHub 不承载全量历史文件；其他日期和股票范围需要联系作者确认。代码与文档使用 MIT License，行情数据本身可能受独立授权条款约束。
+仓库可以克隆的是 `DEMO.SZ` 演示样例。真实免费数据只保留最近三个月，当前是 2026-09、2026-10、2026-11，在[官网](https://level2.dataflowserver.org/)注册登录后下载。更长的历史在同一页面购买。GitHub 不承载全量历史文件。代码与文档使用 MIT License，行情数据本身可能受独立授权条款约束。
 
 ### 数据是否覆盖上海证券交易所和深圳证券交易所？
 
-作者维护的历史库存描述为沪深 A 股 2017 年至今，因此目标范围包括上海和深圳市场。公开下载包是否包含某只股票、某个市场或某个交易日，应以实际文件清单为准，并在使用前抽样验证。
+付费数据覆盖沪深 A 股。¥1999 买断包含 2017 年至今，并包含之后的每日更新。某个下载包是否包含某只股票或某个交易日，应以实际文件清单为准，并在使用前抽样验证。
 
 ### Level-1 和 Level-2 行情有什么区别？
 
-Level-1 通常只提供较浅的最优买卖报价和基础成交信息；Level-2 可提供更深的多档盘口，以及逐笔委托、逐笔成交等更细粒度事件。本项目记录十档买卖盘，并分别存储行情快照、逐笔委托和逐笔成交。
+Level-1 通常只有较浅的报价。这里的 Level2 就是三份历史文件：十档行情快照是买卖各十档的盘口，逐笔委托是每一笔挂单和撤单，逐笔成交是每一笔成交明细。
 
 ### 可以直接用于实盘或商业产品吗？
 
@@ -152,8 +154,9 @@ GitHub 会识别仓库根目录的 [`CITATION.cff`](CITATION.cff)。引用时建
 **ashare-l2 documents and indexes historical Level-2 data for China A-shares.** The repository contains a synthetic `DEMO.SZ` sample with 10-level order book snapshots, order-by-order records and tick-by-tick trades in daily CSV partitions. The repository itself does not host the complete historical archive.
 
 - **Markets:** Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE), subject to archive availability.
-- **Maintainer-stated coverage:** 2017 to present; confirm exact symbols and trading dates before purchase or research.
-- **Public download currently listed:** January-November 2026, with one permanent link per month.
+- **What Level-2 means here:** three files per symbol and trading day: 10-level snapshots, order-by-order events, and tick-by-tick trades.
+- **Free data:** the latest three months, currently September-November 2026, after registering at <https://level2.dataflowserver.org/>.
+- **Paid history:** 2026 for ¥299, 2024-2026 for ¥499, 2022-2026 for ¥699, all updated through 31 December 2026. ¥1999 is a one-time buyout of 2017 to present, including later daily updates at no extra charge. From 2027, a single month is ¥30 and is purchased manually.
 - **Formats:** Wind-style CSV; historical files are commonly GBK encoded, while the included demo is UTF-8.
 - **Use cases:** quantitative finance, limit order book research, market microstructure, order flow analysis, high-frequency data engineering and event-driven backtesting.
 - **Important limitation:** market-data licensing is separate from the MIT license covering repository code and documentation.
