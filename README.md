@@ -6,6 +6,8 @@
 
 **ashare-l2 是中国 A 股 Level-2 历史行情数据的公开索引与格式样例**，覆盖沪深市场十档盘口快照、逐笔委托和逐笔成交 CSV，适合量化研究、市场微观结构分析、订单流研究与回测数据准备。
 
+**如果你的分钟级的策略可能没效果，回撤数据也不好，不妨来试试level2 数据**
+
 > English: ashare-l2 is an index and schema reference for China A-share Level-2 market data, including 10-level order book snapshots, order-by-order events and tick-by-tick trades.
 
 [数据下载](#免费数据下载链接) · [字段说明](docs/schema.md) · [数据卡](docs/data-card.md) · [Python 读取示例](#如何读取-csv) · [常见问题](#常见问题) · [英文简介](#english-summary)
